@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebsiteMVC.Models.House>
+
+@{
+    Layout = "~/Views/Shared/_Layout02.cshtml";
+}
+
+<div id="list">
+    @Html.Action("ListPage")
+</div>
+
+@Html.Partial("_History4MVC")
+<script type="text/javascript">
+    function navigateTo(page) {
+        $.ajax({
+            url : "@Url.Action("ListPage")",
+            data : {
+                page : page
+            },
+            success : function(data) {
+                $("#list").html(data);
+            }
+        });
+    }
+
+    function backTo(page) {
+        $.ajax({
+            url : "@Url.Action("ListPage")",
+            data : {
+                page : page
+            },
+            success : function(data) {
+                $("#list").html(data);
+            }
+        });
+    }
+
+    setPopstate(function(state) {
+        backTo(state.page);
+    });
+</script>
