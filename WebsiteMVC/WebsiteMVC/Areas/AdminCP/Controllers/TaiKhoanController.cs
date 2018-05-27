@@ -77,11 +77,7 @@ namespace WebsiteMVC.Areas.AdminCP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var res = this.RequestAndSaveImage();
-                if (res.Count > 0)
-                {
-                    obj.Avatar = res[0];
-                }
+                obj.SaveFor(q => q.Avatar);
 
                 if (obj.IDTaiKhoan > 0)
                 {

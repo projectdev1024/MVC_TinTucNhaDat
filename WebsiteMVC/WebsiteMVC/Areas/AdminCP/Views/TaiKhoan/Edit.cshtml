@@ -16,7 +16,7 @@
             <div class="form-horizontal">
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 @Html.HiddenFor(model => model.IDTaiKhoan)
-                @Html.HiddenFor(model => model.Active)
+                @Html.HiddenFor(model => model.State)
                 @Html.HiddenFor(model => model.Avatar)
 
                 <div class="form-group">
@@ -52,7 +52,7 @@
                     <div class="col-md-10">
                         <img src="@Model.Avatar" alt="<chưa có ảnh>" />
                         <br />
-                        <input type="file" name="name" value="" />
+                        <input type="file" name="Avatar" value="" />
                     </div>
                 </div>
 
@@ -91,6 +91,8 @@
                         <select required class="form-control" name="POSITION" id="POSITION">
                             <option value="">Vui lòng chọn</option>
                             <option value="ADMIN">Admin</option>
+                            <option value="QUANLY">Quản lý</option>
+                            <option value="CHUYENVIEN">Chuyên viên</option>
                             <option value="USER">User</option>
                         </select>
 

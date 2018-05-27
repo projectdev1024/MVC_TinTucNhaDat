@@ -50,9 +50,6 @@
                         @Html.DisplayNameFor(model => model.IDMap)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Active)
-                    </th>
-                    <th>
                         @Html.DisplayNameFor(model => model.Name)
                     </th>
                     <th>
@@ -78,31 +75,46 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Code)
+                            @Html.DisplayFor(modelItem => item.State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Block)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Floor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.House)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sumary)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IDMap)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Name)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Views)
+                            @Html.DisplayFor(modelItem => item.Start)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.BedRoom)
+                            @Html.DisplayFor(modelItem => item.GiaBan)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Area)
+                            @Html.DisplayFor(modelItem => item.GiaThue)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Price)
+                            @Html.DisplayFor(modelItem => item.Investor.Name)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.TaiKhoan.FullName)
+                            @Html.DisplayFor(modelItem => item.TaiKhoan.Username)
                         </td>
                         <td>
                             @if (accept)
                             {
-                                <a href="@Url.Action("Edit",new { id = item.IDHouse})" class="btn btn-primary" title="Sửa"><i class="fa fa-pencil"></i></a>
-                                <span onclick="delete_object(this,'@item.IDHouse')" class="btn btn-warning" title="Xóa"><i class="fa fa-trash-o"></i></span>
+                                <a href="@Url.Action("Edit",new { id = item.IDDuAn})" class="btn btn-primary" title="Sửa"><i class="fa fa-pencil"></i></a>
+                                <span onclick="delete_object(this,'@item.IDDuAn')" class="btn btn-warning" title="Xóa"><i class="fa fa-trash-o"></i></span>
                             }
                         </td>
                     </tr>
@@ -144,63 +156,3 @@
         }
     </script>
 }
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Block)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Floor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.House)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sumary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IDMap)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Start)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaBan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaThue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Investor.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TaiKhoan.Username)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.IDDuAn }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IDDuAn }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IDDuAn })
-            </td>
-        </tr>
-    }
-
-</table>

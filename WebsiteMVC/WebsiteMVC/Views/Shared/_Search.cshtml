@@ -1,6 +1,5 @@
 ﻿@model WebsiteMVC.Models.Search
 
-
 @using (Html.BeginForm("Search", "House"))
 {
     <div class="header0203 ">
@@ -24,11 +23,11 @@
             <a href="#" id="menu-responsive" class="menuiconblack"></a>
             <div class="searchdetailbox" style="text-align: left; margin-left: 20px;">
                 <select name="@nameof(Model.Type)">
-                    <option value="value">Nhà cho thuê</option>
-                    <option value="value">Nhà rao bán</option>
+                    <option value="0">Nhà cho thuê</option>
+                    <option value="1">Nhà rao bán</option>
                 </select>
                 @Html.TextBoxFor(q => q.NameOrCode, new { placeholder = " Tìm theo mã hoặc địa điểm... ", style = "padding-left: 5px; width: 300px" })
-                <button>Tìm</button>
+                <input type="submit" name="name" value="Tìm" style="width: 50px; text-align: center" />
             </div>
             <div class="menuiconblack"></div>
             <div class="right-menu">
@@ -40,20 +39,10 @@
                     </li>
                     <li>
                         <a class="header1506-link rightmenu-linkblack"
-                           href="@Url.Action("Search","Home")">Tìm kiếm</a>
+                           href="@Url.Action("Search","House")">Tìm kiếm</a>
                     </li>
                     <li><a class="header1506-link rightmenu-linkblack" href="@Url.Action("Index","DuAn")">Dự án</a></li>
                     <li><a class="header1506-link rightmenu-linkblack" href="@Url.Action("GT","House")">Giới thiệu</a></li>
-                </ul>
-                <ul class="border-navgroup-gray mgl-30 hidden">
-                    <li class="border-navgroup">
-                        <a class="header1506-link rightmenu-linkblack" href="#register"
-                           title="Đăng ký">Đăng ký</a>
-                    </li>
-                    <li class="border-navgroup">
-                        <a class="header1506-link rightmenu-linkblack" href="#login"
-                           title="Đăng nhập">Đăng nhập</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -67,73 +56,84 @@
                 Chọn số phòng ngủ
             </li>
             <li class="radiobox">
-                <input id="rd0" type="radio" name="BedRoom" value="0">
+                <input id="rd0" type="radio" name="@nameof(Model.BedRoom)" value="0">
                 <label for="rd0"><span></span>Tất cả</label>
             </li>
             <li class="radiobox">
-                <input id="rd1" type="radio" name="BedRoom" value="1">
+                <input id="rd1" type="radio" name="@nameof(Model.BedRoom)" value="1">
                 <label for="rd1"><span></span>1 phòng</label>
             </li>
             <li class="radiobox">
-                <input id="rd2" type="radio" name="BedRoom" value="2">
+                <input id="rd2" type="radio" name="@nameof(Model.BedRoom)" value="2">
                 <label for="rd2"><span></span>2 phòng</label>
             </li>
             <li class="radiobox">
-                <input id="rd3" type="radio" name="BedRoom" value="3">
+                <input id="rd3" type="radio" name="@nameof(Model.BedRoom)" value="3">
                 <label for="rd3"><span></span>3 phòng</label>
             </li>
             <li class="radiobox">
-                <input id="rd4" type="radio" name="BedRoom" value="4">
+                <input id="rd4" type="radio" name="@nameof(Model.BedRoom)" value="4">
                 <label for="rd4"><span></span>4 phòng</label>
             </li>
             <li class="radiobox">
-                <input id="rd5" type="radio" name="BedRoom" value="5">
+                <input id="rd5" type="radio" name="@nameof(Model.BedRoom)" value="5">
                 <label for="rd5"><span></span>5+ phòng</label>
             </li>
         </ul>
+        <br />
         <table style="width: 100%">
             <tr>
-                <td style="width: 49%">
+                <td>
                     <p>
-                        <label for="amount">Price range:</label>
+                        <label for="amount">Diện tích:</label>
+                        @Html.HiddenFor(q => q.AreaFrom)
+                        @Html.HiddenFor(q => q.AreaTo)
                         <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                     </p>
-                    <div id="slider-range"></div>
+                    <br />
+                    <div id="slider-range" style="width: 80%"></div>
                     <script>
+                        var slider1 = $("#slider-range");
                         $(function () {
-                            $("#slider-range").slider({
+                            slider1.slider({
                                 range: true,
                                 min: 0,
                                 max: 500,
-                                values: [75, 300],
+                                values: [@((int?)ViewBag.AreaFrom ?? 0), @((int?)ViewBag.AreaTo ?? 500)],
                                 slide: function (event, ui) {
-                                    $("#amount").val(`${ui.values[0]} tỷ- ${ui.values[1]} tỷ`);
+                                    $("#amount").val(`${ui.values[0]}m2- ${ui.values[1]}m2`);
+                                    $('[name="@nameof(Model.AreaFrom)"]').val(ui.values[0]);
+                                    $('[name="@nameof(Model.AreaTo)"]').val(ui.values[1]);
                                 }
                             });
-                            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-                                " - $" + $("#slider-range").slider("values", 1));
+                            $("#amount").val(`${slider1.slider("values", 0)}m2 - ${slider1.slider("values", 1)}m2`);
                         });
                     </script>
                 </td>
-                <td style="width: 49%">
+                <td>
                     <p>
-                        <label for="amount">Diện tích:</label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        <label for="price">Giá tiền:</label>
+                        @Html.HiddenFor(q => q.PriceFrom)
+                        @Html.HiddenFor(q => q.PriceTo)
+                        <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
                     </p>
-                    <div id="slider-range2"></div>
+                    <br />
+                    <div id="slider-range2" style="width: 80%"></div>
                     <script>
+                        var slider2 = $("#slider-range2");
                         $(function () {
-                            $("#slider-range2").slider({
+                            slider2.slider({
                                 range: true,
                                 min: 0,
                                 max: 500,
-                                values: [75, 300],
+                                values: [@((int?)ViewBag.PriceFrom ?? 0), @((int?)ViewBag.PriceTo ?? 500)],
                                 slide: function (event, ui) {
-                                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                                    $("#price").val(`${ui.values[0]}tỷ - ${ui.values[1]}tỷ`);
+                                    $('[name="@nameof(Model.PriceFrom)"]').val(ui.values[0]);
+                                    $('[name="@nameof(Model.PriceTo)"]').val(ui.values[1]);
                                 }
                             });
-                            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-                                " - $" + $("#slider-range").slider("values", 1));
+                            $("#price").val(`${slider2.slider("values", 0)}tỷ - ${slider2.slider("values", 1)}tỷ`);
                         });
                     </script>
                 </td>
@@ -141,3 +141,7 @@
         </table>
     </div>
 }
+<script>
+    $('[name="@nameof(Model.BedRoom)"][value="@((int?)ViewBag.BedRoom ?? 0)"]').prop("checked", true);
+    $('[name="@nameof(Model.Type)"]').val('@(string.IsNullOrWhiteSpace(ViewBag.Type)?"0":""+ ViewBag.Type)');
+</script>

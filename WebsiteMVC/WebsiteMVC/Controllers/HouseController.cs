@@ -99,11 +99,55 @@ namespace WebsiteMVC.Controllers
 
         #region Search
 
-        const int LENGTH = 1;
+        const int LENGTH = 10;
 
-        public ActionResult Search()
+        public ActionResult Search(Search search)
         {
-            return View();
+            var lst = db.Houses.Where(q => q.State != MState.DELETE);
+            if (string.IsNullOrWhiteSpace(search.NameOrCode) == false)
+            {
+                lst = lst.Where(q => q.Code.ToLower().Contains(search.NameOrCode.ToLower()) || q.Name.ToLower().Contains(search.NameOrCode.ToLower()));
+            }
+            if (search.BedRoom > 0)
+            {
+                if (search.BedRoom == 5)
+                {
+                    lst = lst.Where(q => q.BedRoom >= search.BedRoom);
+                }
+                else
+                {
+                    lst = lst.Where(q => q.BedRoom == search.BedRoom);
+                }
+            }
+
+            if (search.CheckArea == true)
+            {
+                lst = lst.Where(q => q.Area >= search.AreaFrom && q.Area <= search.AreaTo);
+            }
+
+            if (string.IsNullOrWhiteSpace(search.Type) == false)
+            {
+                lst = lst.Where(q => q.Type == search.Type);
+            }
+
+            var data = lst.ToList();
+            data.ForEach(item => _fillInfo(item));
+
+            var pagination = new Pagination(data.Count, search.Page ?? 1, 10, LENGTH);
+            ViewBag.pagination = pagination;
+
+            ViewBag.AreaFrom = search.AreaFrom;
+            ViewBag.AreaTo = search.AreaTo;
+            ViewBag.BedRoom = search.BedRoom;
+            ViewBag.CheckArea = search.CheckArea;
+            ViewBag.NameOrCode = search.NameOrCode;
+            ViewBag.Page = search.Page;
+            ViewBag.PriceFrom = search.PriceFrom;
+            ViewBag.PriceTo = search.PriceTo;
+            ViewBag.Type = search.Type;
+            ViewBag.search = search;
+
+            return View(data.Skip(pagination.Skipped).Take(LENGTH));
         }
 
         public ActionResult ListPage(Search search)
@@ -140,6 +184,18 @@ namespace WebsiteMVC.Controllers
 
             var pagination = new Pagination(data.Count, search.Page ?? 1, 10, LENGTH);
             ViewBag.pagination = pagination;
+
+            ViewBag.AreaFrom = search.AreaFrom;
+            ViewBag.AreaTo = search.AreaTo;
+            ViewBag.BedRoom = search.BedRoom;
+            ViewBag.CheckArea = search.CheckArea;
+            ViewBag.NameOrCode = search.NameOrCode;
+            ViewBag.Page = search.Page;
+            ViewBag.PriceFrom = search.PriceFrom;
+            ViewBag.PriceTo = search.PriceTo;
+            ViewBag.Type = search.Type;
+            ViewBag.search = search;
+
             return View(data.Skip(pagination.Skipped).Take(LENGTH));
         }
         #endregion
