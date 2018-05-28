@@ -71,6 +71,8 @@
     <Property Name="Area" Type="int" />
     <Property Name="Price" Type="nvarchar" MaxLength="50" />
     <Property Name="State" Type="tinyint" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="int" />
   </EntityType>
   <EntityType Name="ImageDuAn">
     <Key>

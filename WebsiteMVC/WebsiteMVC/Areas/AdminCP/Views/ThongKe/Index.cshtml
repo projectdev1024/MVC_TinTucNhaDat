@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebsiteMVC.Models.House>
+
+@{
+    ViewBag.Title = "THỐNG KÊ ĐĂNG BÀI";
+    Layout = "~/Areas/AdminCP/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="portlet box blue">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>@ViewBag.Title
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div>
+            @using (Html.BeginForm())
+            {
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">TỪ NGÀY</span>
+                            <input type="date" name="sfromDate" value="@(ViewBag.fromDate)" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">ĐẾN NGÀY</span>
+                            <input type="date" name="stoDate" value="@(ViewBag.toDate)" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class=" btn btn-success"><i class="fa fa-filter"></i> Xem</button>
+                    </div>
+                </div>
+            }
+            <hr />
+        </div>
+
+        <table class="table table-bordered">
+            <tr>
+                <td>NGÀY TẠO</td>
+                <td>TÊN BÀI ĐĂNG</td>
+                <td>SỐ LƯỢT XEM HIỆN TẠI</td>
+                <td>CHUYÊN VIÊN</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CreateTime.Display("dd/MM/yyyy")</td>
+                    <td>@item.Name</td>
+                    <td>@item.Views</td>
+                    <td>@item.TaiKhoan.FullName</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

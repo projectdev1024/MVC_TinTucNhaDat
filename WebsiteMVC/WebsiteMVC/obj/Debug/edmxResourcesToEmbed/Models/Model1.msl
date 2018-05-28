@@ -63,6 +63,8 @@
     <EntitySetMapping Name="Houses">
       <EntityTypeMapping TypeName="HOUSEModel.House">
         <MappingFragment StoreEntitySet="House">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
           <ScalarProperty Name="State" ColumnName="State" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Area" ColumnName="Area" />

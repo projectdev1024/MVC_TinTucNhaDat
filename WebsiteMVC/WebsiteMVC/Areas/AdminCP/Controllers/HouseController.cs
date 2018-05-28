@@ -165,5 +165,11 @@ namespace WebsiteMVC.Areas.AdminCP.Controllers
             }
             return item;
         }
+
+        public JsonResult State(int IDHouse, byte newState)
+        {
+            db.Houses.Find(IDHouse).State = newState;
+            return Json(db.SaveChanges());
+        }
     }
 }

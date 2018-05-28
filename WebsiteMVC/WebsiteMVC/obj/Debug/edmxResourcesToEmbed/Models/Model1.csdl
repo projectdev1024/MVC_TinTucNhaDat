@@ -165,6 +165,8 @@
     <Property Name="Area" Type="Int32" />
     <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="State" Type="Byte" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="Int32" />
     <NavigationProperty Name="AddressHouses" Relationship="HOUSEModel.FK_AddressHouse_House" FromRole="House" ToRole="AddressHouse" />
     <NavigationProperty Name="DuAn" Relationship="HOUSEModel.FK_House_DuAn" FromRole="House" ToRole="DuAn" />
     <NavigationProperty Name="TaiKhoan" Relationship="HOUSEModel.FK_House_TaiKhoan" FromRole="House" ToRole="TaiKhoan" />

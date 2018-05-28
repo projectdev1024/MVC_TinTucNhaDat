@@ -17,7 +17,7 @@ namespace WebsiteMVC.Areas.AdminCP
             context.MapRoute(
                 "AdminCP_default",
                 "AdminCP/{controller}/{action}/{id}",
-                new { controller = "House", action = "Index", id = UrlParameter.Optional, Area = AreaName },
+                new { controller = "ThongKe", action = "Index", id = UrlParameter.Optional, Area = AreaName },
                 namespaces: new string[] { "WebsiteMVC.Areas.AdminCP.Controllers" }
             );
         }

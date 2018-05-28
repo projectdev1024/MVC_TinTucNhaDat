@@ -137,3 +137,9 @@ D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csprojResolve
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.pdb
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.xml

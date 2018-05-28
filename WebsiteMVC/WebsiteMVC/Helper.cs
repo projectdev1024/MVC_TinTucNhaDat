@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -42,6 +43,18 @@ namespace WebsiteMVC
             if (expression.Body is MemberExpression member)
                 return member.Member.Name;
             return ((expression.Body as UnaryExpression).Operand as MemberExpression).Member.Name;
+        }
+
+        public static DateTime ToDate(this string sdate, string format = "yyyy-MM-dd")
+        {
+            DateTime date = DateTime.Now;
+            if (DateTime.TryParseExact(sdate, format, CultureInfo.CurrentCulture, DateTimeStyles.None, out date)) return date;
+            return DateTime.Now;
+        }
+
+        public static string Display(this object obj, string format = "#,###")
+        {
+            return string.Format("{0:" + format + "}", obj);
         }
     }
 

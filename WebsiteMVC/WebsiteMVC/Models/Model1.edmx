@@ -76,6 +76,8 @@
           <Property Name="Area" Type="int" />
           <Property Name="Price" Type="nvarchar" MaxLength="50" />
           <Property Name="State" Type="tinyint" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="int" />
         </EntityType>
         <EntityType Name="ImageDuAn">
           <Key>
@@ -617,6 +619,8 @@
           <Property Name="Area" Type="Int32" />
           <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="State" Type="Byte" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
           <NavigationProperty Name="AddressHouses" Relationship="HOUSEModel.FK_AddressHouse_House" FromRole="House" ToRole="AddressHouse" />
           <NavigationProperty Name="DuAn" Relationship="HOUSEModel.FK_House_DuAn" FromRole="House" ToRole="DuAn" />
           <NavigationProperty Name="TaiKhoan" Relationship="HOUSEModel.FK_House_TaiKhoan" FromRole="House" ToRole="TaiKhoan" />
@@ -995,6 +999,8 @@
           <EntitySetMapping Name="Houses">
             <EntityTypeMapping TypeName="HOUSEModel.House">
               <MappingFragment StoreEntitySet="House">
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
                 <ScalarProperty Name="State" ColumnName="State" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Area" ColumnName="Area" />

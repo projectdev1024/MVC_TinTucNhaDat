@@ -35,6 +35,8 @@ namespace WebsiteMVC.Models
         public Nullable<int> Area { get; set; }
         public string Price { get; set; }
         public Nullable<byte> State { get; set; }
+        public Nullable<System.DateTime> CreateTime { get; set; }
+        public Nullable<int> CreateBy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AddressHouse> AddressHouses { get; set; }

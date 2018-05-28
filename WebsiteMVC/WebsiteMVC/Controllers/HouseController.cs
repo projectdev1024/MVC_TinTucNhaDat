@@ -46,6 +46,11 @@ namespace WebsiteMVC.Controllers
         public ActionResult Detail(int IDHouse)
         {
             var item = db.Houses.Find(IDHouse);
+            if (item != null)
+            {
+                item.Views++;
+                db.SaveChanges();
+            }
             item.xImage = item.ImageHouses.FirstOrDefault(q => q.IDHouse == item.IDHouse && q.Rank == 0);
             item.xAddress1 = @item.AddressHouses.FirstOrDefault(q => q.Address.Rank == 1)?.Address;
             item.xAddress2 = @item.AddressHouses.FirstOrDefault(q => q.Address.Rank == 2)?.Address;
@@ -55,7 +60,8 @@ namespace WebsiteMVC.Controllers
 
         public ActionResult InfoHouse(int id)
         {
-            return View(db.Houses.Find(id).InfoHouses.ToList());
+            var obj = db.Houses.Find(id);
+            return View(obj.InfoHouses.ToList());
         }
 
         public ActionResult ImageHouse(int id)
