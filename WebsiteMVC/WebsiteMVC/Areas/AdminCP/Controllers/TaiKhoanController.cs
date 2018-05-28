@@ -13,8 +13,6 @@ namespace WebsiteMVC.Areas.AdminCP.Controllers
     [RoleAccept(eRole.ADMIN)]
     public class TaiKhoanController : AdminController
     {
-        private HOUSEEntities db = new HOUSEEntities();
-
         // GET: TaiKhoan
         public ActionResult Index()
         {

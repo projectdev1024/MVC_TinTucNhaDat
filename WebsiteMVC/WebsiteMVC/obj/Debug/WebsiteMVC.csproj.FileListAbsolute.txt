@@ -89,10 +89,12 @@ D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Dependency
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.WindowsServer.xml
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Web.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csproj.CoreCompileInputs.cache
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.dll.config
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.pdb
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Antlr3.Runtime.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\EntityFramework.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\EntityFramework.SqlServer.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Agent.Intercept.dll
@@ -105,7 +107,10 @@ D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.ApplicationInsights.
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.Web.Infrastructure.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Newtonsoft.Json.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Helpers.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Mvc.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Optimization.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Razor.dll
@@ -113,9 +118,14 @@ D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.WebPages.Deployment
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.WebPages.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.WebPages.Razor.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebGrease.dll
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.pdb
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\EntityFramework.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\EntityFramework.SqlServer.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Helpers.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Mvc.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Optimization.xml
@@ -130,16 +140,5 @@ D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.DependencyCollect
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.WindowsServer.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Web.xml
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csproj.CoreCompileInputs.cache
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.pdb
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csprojResolveAssemblyReference.cache
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.dll
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.pdb
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Bootstrap.Pagination.xml
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.dll
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.dll
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.dll
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Net.Http.Formatting.xml
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.xml
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\System.Web.Http.WebHost.xml
