@@ -125,8 +125,8 @@
                             slider2.slider({
                                 range: true,
                                 min: 0,
-                                max: 500,
-                                values: [@((int?)ViewBag.PriceFrom ?? 0), @((int?)ViewBag.PriceTo ?? 500)],
+                                max: 100,
+                                values: [@((int?)ViewBag.PriceFrom ?? 0), @((int?)ViewBag.PriceTo ?? 100)],
                                 slide: function (event, ui) {
                                     $("#price").val(`${ui.values[0]}tỷ - ${ui.values[1]}tỷ`);
                                     $('[name="@nameof(Model.PriceFrom)"]').val(ui.values[0]);

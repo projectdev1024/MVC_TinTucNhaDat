@@ -69,7 +69,7 @@
     <Property Name="IDMap" Type="nvarchar" MaxLength="50" />
     <Property Name="BedRoom" Type="int" />
     <Property Name="Area" Type="int" />
-    <Property Name="Price" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
     <Property Name="State" Type="tinyint" />
     <Property Name="CreateTime" Type="datetime" />
     <Property Name="CreateBy" Type="int" />

@@ -110,6 +110,17 @@ namespace WebsiteMVC.Controllers
         public ActionResult Search(Search search)
         {
             var lst = db.Houses.Where(q => q.State != MState.DELETE);
+
+            if (search.PriceFrom.HasValue)
+            {
+                lst = lst.Where(q => q.Price >= search.PriceFrom);
+            }
+
+            if (search.PriceTo.HasValue)
+            {
+                lst = lst.Where(q => q.Price <= search.PriceTo);
+            }
+
             if (string.IsNullOrWhiteSpace(search.NameOrCode) == false)
             {
                 lst = lst.Where(q => q.Code.ToLower().Contains(search.NameOrCode.ToLower()) || q.Name.ToLower().Contains(search.NameOrCode.ToLower()));

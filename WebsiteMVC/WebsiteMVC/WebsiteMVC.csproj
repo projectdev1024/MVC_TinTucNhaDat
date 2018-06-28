@@ -2245,6 +2245,7 @@
     <Content Include="Content\theme\assets\global\plugins\uniform\jquery.uniform.min.js" />
     <Content Include="Content\theme\assets\global\scripts\datatable.js" />
     <Content Include="Content\theme\assets\global\scripts\metronic.js" />
+    <Content Include="Content\Upload\img\duan.jpg" />
     <Content Include="css\footer.css" />
     <Content Include="css\material-design-iconic-font.2-118.css" />
     <Content Include="css\menu.min-118.css" />
@@ -2578,7 +2579,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminCP\Models\" />
-    <Folder Include="Content\Upload\img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -89,7 +89,6 @@ D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Dependency
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.WindowsServer.xml
 D:\FLANCER\C#\WEB\Template MVC\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Web.xml
-D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csproj.CoreCompileInputs.cache
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.dll.config
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\WebsiteMVC.pdb
@@ -140,5 +139,6 @@ D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.DependencyCollect
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.WindowsServer.xml
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\bin\Microsoft.AI.Web.xml
+D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.csproj.CoreCompileInputs.cache
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.dll
 D:\FLANCER\C#\WEB\HOUSE\WebsiteMVC\WebsiteMVC\obj\Debug\WebsiteMVC.pdb

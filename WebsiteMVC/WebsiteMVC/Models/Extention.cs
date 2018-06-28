@@ -27,8 +27,9 @@ namespace WebsiteMVC.Models
         {
             var files = controller.Request.Files;
             var lst = new List<string>();
-            foreach (HttpPostedFileBase file in files)
+            foreach (string sfile in files)
             {
+                HttpPostedFileBase file = files[sfile];
                 if (file.ContentType.Contains("image") && file.ContentLength > 0)
                 {
                     var name_file = $"{DateTime.Now.ToString("hhmmssddMMyyyy")}_{Path.GetFileName(file.FileName)}";

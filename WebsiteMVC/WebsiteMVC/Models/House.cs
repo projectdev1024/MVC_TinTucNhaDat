@@ -33,7 +33,7 @@ namespace WebsiteMVC.Models
         public string IDMap { get; set; }
         public Nullable<int> BedRoom { get; set; }
         public Nullable<int> Area { get; set; }
-        public string Price { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public Nullable<byte> State { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
         public Nullable<int> CreateBy { get; set; }

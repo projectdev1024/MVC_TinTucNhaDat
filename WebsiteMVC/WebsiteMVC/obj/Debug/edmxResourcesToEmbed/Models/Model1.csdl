@@ -163,7 +163,7 @@
     <Property Name="IDMap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="BedRoom" Type="Int32" />
     <Property Name="Area" Type="Int32" />
-    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="State" Type="Byte" />
     <Property Name="CreateTime" Type="DateTime" Precision="3" />
     <Property Name="CreateBy" Type="Int32" />
